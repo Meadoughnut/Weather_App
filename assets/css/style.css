@@ -1,94 +1,149 @@
-.dashboard{
+/* 
 
+section{
+    display: flex; /* Use flexbox for layout */
+justify-content: space-between;
+/* Space evenly between items */
+align-items: flex-start;
+/* Align items at the start */
+}
+
+
+header {
     padding: 10px;
-    background-color:cadetblue;
+    background-color: aqua;
     color: beige;
     text-align: center;
 }
 
-.mb-3{
+.mb-3 {
     margin-top: 50px;
-    color: cadetblue ;
-    border: 1px solid cadetblue;
-    width: 30%;
-    height: 100%;}
-    /* here i am going to delete the border and width after adjusting the card border-right-style: ;
-} */
-#Input1{
-    width: 25%;
-    margin-bottom: 10px;
     color: cadetblue;
+    /* border: 1px solid cadetblue; */
+    width: 50%;
+
+
 }
-.btn{
-    width: 25%;
+
+/* here i am going to delete the border and width after adjusting the card border-right-style: ;
+} */
+#Input1 {
+    width: 16em;
+    margin-bottom: 10px;
+
+
+}
+
+.btn {
+    width: 16em;
     margin-bottom: 10px;
     background-color: cadetblue;
 }
-hr{
+
+hr {
+    width: 16em;
+}
+
+.currentresult {
+    border: 1px solid black;
+    display: flex;
+    width: fit-content;
+    height: 10em;
+    width: 40em;
+    /* margin-left: 40rem; */
+    margin-bottom: 30em;
+
+}
+
+main {
+    display: flex;
+}
+
+.btn-block {
     width: 25%;
 }
-.currentboard{
-    margin-top: 50px;
-    color: cadetblue ;
-   
-    width: 30%;
 
-}
-.card-body1
-{
-    margin-top: 50px;
-    color: cadetblue ;
-    
-    width: 30%;
-   
+.searchpage {
+    /* border: 1px solid cadetblue; */
+    width: 42%;
+    height: 100%;
+    justify-items: ;
+    padding-top: 0%;
 }
 
-.card-body2
-{
-    margin-top: 50px;
-    color: cadetblue ;
-    
-    width: 30%;
-   
-}
-   
-
-.card-body3
-{
-    margin-top: 50px;
-    color: cadetblue ;
-    
-    width: 30%;
-   
-}
-   
-
-.card-body4
-{
-    margin-top: 50px;
-    color: cadetblue ;
-    
-    width: 30%;
-   
-}
-   
-.card-body5
-{
-    margin-top: 50px;
-    color: cadetblue ;
-   
-    width: 30%;
-   
-}
-.card-body6
-{
-    margin-top: 50px;
-    color: cadetblue ;
-  
-    width: 30%;
-   
+h3 {
+    border: 1px solid cadetblue;
+    width: 10em;
 }
 
-   
-   
+.dashboard {
+    margin-bottom: 50px;
+    width: 100%;
+    height: 60px;
+    align-items: baseline;
+    background-color: cadetblue;
+    border:0 1px solid cadetblue;
+    color: beige;
+}
+section{
+    display: flex;
+}
+
+
+
+.card{
+    margin-left: 2em;
+    margin-top:50px;
+}
+h4{
     
+    width:em;
+   
+
+}
+.forcastcards{
+    display: flex;
+    
+}
+.forcastcard1  {
+    padding: 10px;
+    border: 0.5px solid grey;
+    width: 15em;
+    margin: 10px;
+    height: fit-content;
+}
+.forcastcard2  {
+    padding: 10px;
+    border: 0.5px solid grey;
+    width: 15em;
+    margin: 10px;
+    height: fit-content;
+}
+.forcastcard3  {
+    padding: 10px;
+    border: 0.5px solid grey;
+    width: 15em;
+    margin: 10px;
+    height: fit-content;
+}
+.forcastcard4  {
+    padding: 10px;
+    border: 0.5px solid grey;
+    width: 15em;
+    margin-top: 15em;
+    margin-right: 40em;
+    height: fit-content;
+}
+.forcastcard5  {
+    padding: 10px;
+    border: 0.5px solid grey;
+    width: 15em;
+    margin-top: 15em;
+    margin-right: 40em;
+ 
+    height: fit-content;
+}
+.days{
+    margin-left:18em;
+    display: flex;
+}
