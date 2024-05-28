@@ -21,6 +21,41 @@ function  getGeocodingUrl(cityName) {
     })
     .catch(error => console.error('Error fetching the data:', error));
 }
+
+function displayCurrentWeather (data, cityName){
+  const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  fetch (currentWeatherUrl)
+  .then(response => response.json())
+  .then(data => {
+    displayCurrentWeather(data, cityName);
+  })
+  .catch(error => console.error('Error fetching the weather data:', error));
+}
+
+
+function displayCurrentWeather(data, cityName) {
+  const currentWeatherEL = document.getElementById('weather-result');
+  currentWeatherEL.innerHTML = `
+            <p><strong>Date:</strong> ${forecast.dt_txt.split(" ")[0]}</p>
+            <p><img src= "https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png"/></p>
+            <p><strong>Temperature:</strong> ${forecast.main.temp} °F</p>
+            <p><strong>Humidity:</strong> ${forecast.main.humidity}%</p>
+            <p><strong>Wind Speed:</strong> ${forecast.wind.speed} m/s</p>
+
+        `;
+        forcastResultEl.appendChild(currentWeatherEL);
+      };
+
+
+
+
+
+  
+
+
+
+
+
 function getWeatherForcast(lat, lon, cityName) {
       const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
 
