@@ -1,14 +1,5 @@
-/* 
-
-section{
-    display: flex; /* Use flexbox for layout */
-justify-content: space-between;
-/* Space evenly between items */
-align-items: flex-start;
-/* Align items at the start */
-}
-body{
-    background-color:bisque;
+body {
+    background-color:bisque
 }
 
 
@@ -67,31 +58,30 @@ main {
 }
 
 .searchpage {
-   
+
     width: 42%;
     height: 100%;
-    justify-items: ;
     padding-top: 0%;
     padding-left: 20px;
 }
 
 h3 {
-   
+
     width: 10em;
 }
 
 .dashboard {
-    margin-bottom: 50px;
+    padding: 10px;
     width: 100%;
-    height: 60px;
-    align-items: baseline;
+
+    text-align: center;
     background-color: cadetblue;
     border: 0 1px solid cadetblue;
     color: beige;
-  
+
 }
 
-section {
+section.form-section {
     display: flex;
 }
 
@@ -112,56 +102,33 @@ h4 {
 .forcastcards {
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
+    border: 1px, solid, black;
 
 }
 
-.forcastcard1 {
-    padding: 10px;
-    border: 0.5px solid grey;
-    width: 15em;
-    margin: 10px;
-    height: fit-content;
-}
 
-.forcastcard2 {
-    padding: 10px;
-    border: 0.5px solid grey;
-    width: 15em;
-    margin: 10px;
-    height: fit-content;
-}
 
-.forcastcard3 {
+/* .forcastcard {
     padding: 10px;
-    border: 0.5px solid grey;
+    border: 1px solid black;
     width: 15em;
-    margin: 10px;
-    height: fit-content;
-}
-
-.forcastcard4 {
-    padding: 10px;
-    border: 0.5px solid grey;
-    width: 15em;
-    margin-top: 15em;
-    margin: 10px;
 
     height: fit-content;
-}
-
-.forcastcard5 {
-    padding: 10px;
-    border: 0.5px solid grey;
-    width: 15em;
-    margin-top: 15em;
-    margin: 10px;
-    height: fit-content;
-}
+} */
 
 .days {
     margin-left: 18em;
-    display: flex;
+    /* display: flex; */
 }
-.forcastcards{
+
+.forcastcards {
+    display: flex;
     flex-wrap: wrap;
+    padding: 10px;
+    border: 1px solid black;
+    width: 15em;
+
+    
+
 }

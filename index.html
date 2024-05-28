@@ -9,13 +9,12 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="/assets/js/script.js"></script>
-
+    
 </head>
 
 <body>
     <h1 class="dashboard"> Weather Dashboard</h1>
-    <section>
+    <section class="form-section">
         <form class="searchpage" id="city-form">
 
             <div class="mb-3">
@@ -28,8 +27,8 @@
             </div>
 
         </form>
-        <div class="forcastcards"></div>
-        <div id="Weather-result">
+        <!-- <div class="forcastcards"></div> -->
+        <div id="weather-result">
             <div class="card-body"></div>
          </div>
 
@@ -39,8 +38,8 @@
     <section class="days">
         <h4 class="forcast"> 5 days forcast:</h4>
         <br>
-        <div class="forcastcards">
-            <div class="forcastcard1">
+        <div class="forcastcards" id="forcast-results">
+            <!-- <div class="forcastcard1">
 
 
             </div>
@@ -59,10 +58,12 @@
             <div class="forcastcard5">
 
 
-            </div>
+            </div> -->
         </div>
         </div>
     </section>
+    <script src="/assets/js/script.js"></script>
+
 
 </body>
 
