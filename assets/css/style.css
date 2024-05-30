@@ -46,7 +46,10 @@ h3 {
     padding: 10px;
     width: 100%;
     text-align: center;
-    border: 0 1px solid cadetblue;
+    background-color: lightskyblue;
+    border: 0.5px, solid, lightskyblue;
+    box-shadow: 20px;
+   
 }
 
 section.form-section {
@@ -68,7 +71,7 @@ h4 {
 .forcastcard {
     color: beige;
     padding: 10px;
-    border: 1px solid beige;
+    border: 1px solid grey;
     width: 15em;
     height: fit-content;
 }
@@ -95,7 +98,7 @@ h5 {
 
 #weather-result {
     border: 1px solid beige;
-    color: beige;
+    color:grey;
     width: 100em;
     height: fit-content;
     margin-top: 17em;
