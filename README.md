@@ -23,7 +23,7 @@ The Weather App is a web application designed for travelers to check the weather
 
 ## Deployed Page
 
-You can access the live version of the Weather Dashboard here: [Weather App Deployed Page](https://github.com/Meadoughnut/Weather_App)
+You can access the live version of the Weather Dashboard here: [Weather App Deployed Page](https://meadoughnut.github.io/Weather_App/)
 
 
 ## Usage
