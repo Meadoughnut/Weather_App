@@ -98,15 +98,15 @@ function getCurrentWeather(cityName) {
 function displayCurrentWeather(data, cityName) {
   const currentWeatherEL = document.getElementById('weather-result');
   currentWeatherEL.innerHTML = `
-            <p><strong>City:</strong> ${cityName}</p>
+            <p><strong> ${cityName}<strong></p>
             <p><strong>Date:</strong> ${new Date(data.dt * 1000).toLocaleDateString()}</p>
-            
             <p><img src= "https://openweathermap.org/img/wn/${data.weather[0].icon}.png"/></p>
             <p><strong>Temperature:</strong> ${data.main.temp} °F</p>
             <p><strong>Humidity:</strong> ${data.main.humidity}%</p>
             <p><strong>Wind Speed:</strong> ${data.wind.speed} m/s</p>
-
         `;
+            
+
 };
 function getWeatherForcast(lat, lon, cityName) {
   const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
@@ -130,6 +130,7 @@ function displayWeatherForecast(data, cityName) {
   next5DaysForecast.forEach((forecast) => {
     const forecastEl = document.createElement('div');
     forecastEl.classList.add('forcastcard');
+    
     forecastEl.innerHTML = `
             <p><strong>Date:</strong> ${forecast.dt_txt.split(" ")[0]}</p>
             <p><img src= "https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png"/></p>
