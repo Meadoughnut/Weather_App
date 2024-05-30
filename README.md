@@ -81,4 +81,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-Happy traveling and may the weather always be in your favor!
+🌦️🌦️🌦️  Happy traveling and may the weather always be in your favor!  🌦️🌦️🌦️
