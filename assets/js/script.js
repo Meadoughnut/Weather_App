@@ -1,8 +1,65 @@
 const apiKey = "c8b61dd674f9e6e05e9b9f07ff9b9665";
 
+const searchHistoryListEl = document.getElementById('search-history-list');
+const searchHistoryContainerEl = document.getElementById('search-history-container');
+
+function updateSearchHistoryHTML(){
+  var searchHistoryListJson = localStorage.getItem('search-history');
+  if (searchHistoryListJson == null){
+    return;
+  }
+
+  var searchHistoryList = JSON.parse(searchHistoryListJson);
+  searchHistoryList.forEach((historyItem) => {
+    addCityToSearchHistoryHTML(historyItem.cityName);
+  })
+}
+
+function addCityToSearchHistoryHTML(cityName){
+  searchHistoryContainerEl.style.display = 'block';
+  const historyItemDiv = document.createElement('div');
+  historyItemDiv.classList.add('search-history-item');
+  historyItemDiv.innerHTML = `
+    <button type='button'>${cityName}</button>
+  `;
+  searchHistoryListEl.appendChild(historyItemDiv);
+}
+
+function getSearchHistory(){
+  var searchHistoryListJson = localStorage.getItem('search-history');
+  if (searchHistoryListJson == null){
+    return [];
+  }
+  var searchHistoryList = JSON.parse(searchHistoryListJson);
+  return searchHistoryList;
+}
+
+function addCityToSearchHistory(cityName){
+  const historyItemToSave = {
+    cityName: cityName
+  };
+  var currentSearchHistory = getSearchHistory();
+  currentSearchHistory.push(historyItemToSave);
+  localStorage.setItem('search-history', JSON.stringify(currentSearchHistory));
+
+  addCityToSearchHistoryHTML(cityName);
+}
+
+
+
+
+
+// get search history from local storage and update the html
+updateSearchHistoryHTML();
+
+
 document.getElementById('city-form').addEventListener('submit', function (event) {
   event.preventDefault();
   const cityName = document.getElementById('Input1').value;
+  if(cityName == ''){
+    return;
+  }
+  addCityToSearchHistory(cityName);
   getGeocodingUrl(cityName);
 });
 
@@ -14,8 +71,8 @@ function getGeocodingUrl(cityName) {
       if (data.length > 0) {
         const { lat, lon } = data[0];
         console.log(`coordinates for ${cityName}: Latitude - ${lat}, Longitude - ${lon}`);
-        getWeatherForcast(lat, lon, cityName);
         getCurrentWeather(cityName);
+        getWeatherForcast(lat, lon, cityName);
         //trynna call the getcurrentweather function.
         //may be i should do the throw error thing.
       } else {
@@ -25,7 +82,7 @@ function getGeocodingUrl(cityName) {
     .catch(error => console.error('Error fetching the data:', error));
 }
 
-function getcurrentWeather(cityName) {
+function getCurrentWeather(cityName) {
   const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=imperial`;
   fetch(currentWeatherUrl)
     .then(response => response.json())
@@ -50,7 +107,6 @@ function displayCurrentWeather(data, cityName) {
             <p><strong>Wind Speed:</strong> ${data.wind.speed} m/s</p>
 
         `;
-  currentWeatherEL.appendChild(currentWeatherEL);
 };
 function getWeatherForcast(lat, lon, cityName) {
   const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
@@ -73,7 +129,7 @@ function displayWeatherForecast(data, cityName) {
 
   next5DaysForecast.forEach((forecast) => {
     const forecastEl = document.createElement('div');
-    forecastEl.classList.add('forcastcards');
+    forecastEl.classList.add('forcastcard');
     forecastEl.innerHTML = `
             <p><strong>Date:</strong> ${forecast.dt_txt.split(" ")[0]}</p>
             <p><img src= "https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png"/></p>

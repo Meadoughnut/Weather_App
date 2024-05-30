@@ -93,9 +93,10 @@ section.form-section {
 }
 
 h4 {
-    border: 1px, solid black;
+    border: 1px, solid cadetblue;
     height: fit-content;
     width: 240px;
+    color: cadetblue;
 
 }
 
@@ -103,32 +104,37 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    border: 1px, solid, black;
+    /* border: 1px, solid, black; */
 
 }
 
 
 
-/* .forcastcard {
+.forcastcard {
     padding: 10px;
     border: 1px solid black;
     width: 15em;
 
     height: fit-content;
-} */
+}
 
 .days {
     margin-left: 18em;
-    /* display: flex; */
+  
 }
 
-.forcastcards {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    border: 1px solid black;
-    width: 15em;
 
-    
 
+.search-history-item > button {
+    border: 1px solid cadetblue;
+    border-radius: 0.25rem;
+    color: cadetblue;
+    height: 30px;
+    display: block;
+    margin: 5px;
+    width: 16em;
+}
+h5 {
+    border: 1px solid cadetblue;
+  
 }
