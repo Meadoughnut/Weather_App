@@ -1,5 +1,6 @@
+/* The body style will be used for whole background picture display */
 body {
-    background-image: url(/assets/Screen\ Shot\ 2024-05-29\ at\ 8.26.40\ PM.png);
+background-image: url(/assets/Screen\ Shot\ 2024-05-29\ at\ 8.26.40\ PM.png);
 }
 
 .mb-3 {
@@ -40,7 +41,7 @@ hr {
 h3 {
     width: 10em;
 }
-
+/* I used light colors that much most of the weather app */
 .dashboard {
     color: beige;
     padding: 10px;
@@ -61,7 +62,7 @@ h4 {
     width: 240px;
     color: beige;
 }
-
+/* Style that used to style the appended elements and html */
 .forcastcards {
     display: flex;
     flex-wrap: wrap;
