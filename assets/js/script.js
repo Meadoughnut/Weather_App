@@ -65,7 +65,7 @@ document.getElementById('city-form').addEventListener('submit', function (event)
 });
 
 function getGeocodingUrl(cityName) {
-  const geocodingUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`;
+  const geocodingUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`;
   fetch(geocodingUrl)
     .then(response => response.json())
     .then(data => {
