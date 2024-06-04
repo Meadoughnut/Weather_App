@@ -1,5 +1,6 @@
 const apiKey = "c8b61dd674f9e6e05e9b9f07ff9b9665";
 
+
 const searchHistoryListEl = document.getElementById('search-history-list');
 const searchHistoryContainerEl = document.getElementById('search-history-container');
 
