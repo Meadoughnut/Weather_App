@@ -1,6 +1,6 @@
 /* The body style will be used for whole background picture display */
 body {
-background-image: url("./assets/Background.png");
+background-image: url("../Background.png");
 }
 
 .mb-3 {
